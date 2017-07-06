@@ -54,15 +54,15 @@ And now we are going to install NDK and SDK
 Remove `#` to uncomment all these lines  
 ```
 android_sdk_repository(  
-&ensp;&ensp;name = “androidsdk”,  
-&ensp;&ensp;api_level = 23,  
-&ensp;&ensp;build_tools_version = “25.0.2”,  
-&ensp;&ensp;path = “/android”,  
+  name = “androidsdk”,  
+  api_level = 23,  
+  build_tools_version = “25.0.2”,  
+  path = “/android”,  
 )  
 android_ndk_repository(  
-&ensp;&ensp;name=”androidndk”,  
-&ensp;&ensp;path=”/android/android-ndk-r12b”,  
-&ensp;&ensp;api_level=21  
+  name=”androidndk”,  
+  path=”/android/android-ndk-r12b”,  
+  api_level=21  
 )  
 ```
 ### Building TensorFlow Android demo  
@@ -140,11 +140,11 @@ Comment all these lines, and apk will not install TF_detect and TF_stylize on yo
         </activity>   -->
 ```  
   
-Use `#` to comment all these lines, and we will build the app with bazel, it will not download the model that we are not going to use.  
+Comment all these lines, and we will build the app with bazel, it will not download the model that we are not going to use.  
 ```
-"@inception5h//:model_files",  
-"@mobile_multibox//:model_files",  
-"@stylize//:model_files",  
+# "@inception5h//:model_files",  
+# "@mobile_multibox//:model_files",  
+# "@stylize//:model_files",  
 ```
   
 Now we can build the app.  
