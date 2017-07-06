@@ -38,7 +38,7 @@ And now we are going to install NDK and SDK
 `# tools/bin/sdkmanager "build-tools;25.0.2"`  
 ### Configure TensorFlow build
 `# cd /tensorflow`  
-`# vi WORKSPACE` (For downloading vi: use `apt-get install vi`)  
+`# vi WORKSPACE` (For downloading vi: use `# apt-get install vi`)  
   
 Remove `#` to uncomment all these lines  
 >android_sdk_repository(  
