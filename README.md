@@ -3,7 +3,7 @@ Create a docker image for build your own dataset on Android(TF_classify).
 ## Installation
 At first, we need to install docker on our PC and it's better to create your own docker account.    
 See https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/ for installing docker-ce.  
-## Creating a Docker container for building the TensorFlow Android demo
+## Create a Docker container for building the TensorFlow Android demo
 ### Run a Docker container with all the TensorFlow dependencies 
 Use `docker run -it gcr.io/tensorflow/tensorflow:latest-devel` to download all the Tensorflow dependencies and you will see a **#** at your ternimal.  
   
