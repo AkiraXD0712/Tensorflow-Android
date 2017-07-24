@@ -119,7 +119,7 @@ These command can copy our retrained model and our retrained labels file into th
 # vi AndroidManifest.xml
 ```
   
-Comment all these lines, and apk will not install TF_detect and TF_stylize on your mobile.  
+Comment all these lines, if your don't want to install TF_detect and TF_stylize on your mobile.  
 ```
    <!--     <activity android:name="org.tensorflow.demo.DetectorActivity"
                   android:screenOrientation="portrait"
@@ -160,6 +160,9 @@ After that, we need to copy it to our shared mount so we can access it from outs
 Do the same thing to commit our changes.  
   
 Use `adb install -r $HOME/tf_files/tensorflow_demo.apk` to install the Android demo app.  
+##Create your own detection model
+Now we are going to create our own model applied in TF_detect by using Yolo.
+###pre
 
 
 
