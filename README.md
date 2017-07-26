@@ -35,7 +35,7 @@ apt-get install wget
 
 NDK version recommended is 12b and API LEVEL >= 23  
 
-```bash
+```
 # Download NDK and SDK
 mkdir /android
 cd /android  
@@ -237,7 +237,7 @@ $ pip install .
 (It's crucial that you leave `tiny-yolo-voc.cfg` file unchanged)  
 2. In `tiny-yolo-voc-new.cfg`, change classes in the [region] layer(the last layer) to the number of classes you are going to train for.    
 
-    ```python
+    ```
     ...
 
     [region]
@@ -253,8 +253,9 @@ $ pip install .
 
 3. In `tiny-yolo-voc-new.cfg`, change filters in the [convolutional] layer(the second to last layer) to num*(classes + 5).  
 
-    ```python
+    ```
     ...
+    
     [convolutional]
     size=1
     stride=1
@@ -263,6 +264,7 @@ $ pip install .
     activation=linear
     [region]
     anchors = 1.08,1.19, 3.42,4.41, 6.63,11.38, 9.42,5.11, 16.62,10.52
+    
     ...
     ```
 
