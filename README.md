@@ -12,8 +12,8 @@ See https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/ for inst
 Use `docker run -it gcr.io/tensorflow/tensorflow:latest-devel` to download all the Tensorflow dependencies and you will see a **#** at your terminal.  
 
 Check if python and tensorflow are working:  
-```python
-# python
+```
+python
 >> import tensorflow as tf  
 >> hello = tf.constant('Hello world')  
 >> sess = tf.Session()
@@ -324,7 +324,7 @@ cd /tensorflow/tensorflow/examples/android/src/org/tensorflow/demo
 vim DetectorActivity.java
 ```
 
-modify these 2 lines in DetectorActivity.java
+Modify these 2 lines in DetectorActivity.java
 
 ```java
 ...
