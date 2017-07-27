@@ -103,7 +103,7 @@ create a ~/tf_files/images folder and place each set of **jpeg** images in subdi
 ### Retrain the model to learn from your data set
 
 ```
-$ sudo docker run -it -v $HOME/images:/images <REPOSITORY>
+$ sudo docker run -it -v $HOME/tf_files:/tf_files <REPOSITORY>
 cd /tensorflow`  
 python tensorflow/examples/image_retraining/retrain.py \
   --bottleneck_dir=/tf_files/bottlenecks \
@@ -166,7 +166,11 @@ Comment all these lines, if your don't want to install TF_detect and TF_stylize 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>-->
-```  
+```
+
+```
+vim BUILD
+```
 
 Comment all these lines, and we will build the app with bazel, it will not download the model that we are not going to use.  
 
@@ -217,7 +221,7 @@ Create train.txt in Main folder which contain all image names.
 #### Download dependencies
 
 Python3, tensorflow, numpy, opencv3, Cython.
-#### Download weight files.
+#### Download weight files
 
 The weight files can be download in [here](https://drive.google.com/drive/folders/0B1tW_VtY7onidEwyQ2FtQVplWEU),
 which include `yolo-full` and `yolo-tiny` of v1.0, `tiny-yolo-v1.1` of v1.1, and `yolo`, `tiny-yolo-voc` of v2.  
@@ -226,7 +230,7 @@ Create a **bin** folder and place the weight file in this folder.
 #### Install Darkflow
 
 ```
-$ git clone http://github/thtrieu/darkflow  
+$ git clone http://github.com/thtrieu/darkflow  
 $ cd darkflow  
 $ pip install .  
 ```
