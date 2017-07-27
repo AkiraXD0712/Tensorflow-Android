@@ -219,7 +219,7 @@ Create train.txt in Main folder which contain all image names.
 Python3, tensorflow, numpy, opencv3, Cython.
 #### Download weight files.
 
-The weight files can be download in [here](https://drive.google.com/drive/folder/0B1tW_VtY7onidEwyQ2FtQVplWEU),
+The weight files can be download in [here](https://drive.google.com/drive/folders/0B1tW_VtY7onidEwyQ2FtQVplWEU),
 which include `yolo-full` and `yolo-tiny` of v1.0, `tiny-yolo-v1.1` of v1.1, and `yolo`, `tiny-yolo-voc` of v2.  
 Create a **bin** folder and place the weight file in this folder.
 
