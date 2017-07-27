@@ -237,9 +237,9 @@ $ pip install .
 
 #### Training on your own dataset
 
-1. Create a copy of the configuration file `tiny-yolo-voc.cfg` and rename it according to your preference like `tiny-yolo-voc-new.cfg`.
-(It's crucial that you leave `tiny-yolo-voc.cfg` file unchanged)  
-2. In `tiny-yolo-voc-new.cfg`, change classes in the [region] layer(the last layer) to the number of classes you are going to train for.    
+1. Create a copy of the configuration file `tiny-yolo.cfg` and rename it according to your preference like `tiny-yolo-new.cfg`.
+(It's crucial that you leave `tiny-yolo.cfg` file unchanged)  
+2. In `tiny-yolo-new.cfg`, change classes in the [region] layer(the last layer) to the number of classes you are going to train for.    
 
     ```
     ...
@@ -255,7 +255,7 @@ $ pip install .
     ...
     ```
 
-3. In `tiny-yolo-voc-new.cfg`, change filters in the [convolutional] layer(the second to last layer) to num*(classes + 5).  
+3. In `tiny-yolo-new.cfg`, change filters in the [convolutional] layer(the second to last layer) to num*(classes + 5).  
 
     ```
     ...
@@ -273,16 +273,16 @@ $ pip install .
     ```
 
 4. Change `labels.txt` to include the labels(s) you want to train on
-(number of labels should be the same as the number of classes you set in `tiny-yolo-voc-new.cfg` file).
-5. Reference the `tiny-yolo-voc-new.cfg` model when you train.
+(number of labels should be the same as the number of classes you set in `tiny-yolo-new.cfg` file).
+5. Reference the `tiny-yolo-new.cfg` model when you train.
 
-    `$ flow --model cfg/tiny-yolo-voc-new.cfg --load bin/tiny-yolo-voc.weights --train --annotation VOC/Annotation --dataset VOC/JPEGImages`
+    `$ flow --model cfg/tiny-yolo-new.cfg --load bin/tiny-yolo-voc.weights --train --annotation VOC/Annotation --dataset VOC/JPEGImages`
 
   You can use --lr for changing learning rate or use --epoch for changing number of epochs.
 
 #### Prediction
 
-Put some images which you are going to test for in `sample_img/`
+Put some images which you are going to test for in `sample_img/`.
 
 ```bash
 # Forward all images in sample_img/ using the lastest checkpoing
@@ -292,7 +292,7 @@ $ flow --imgdir sample_img/ --model cfg/tiny-yolo-voc-new.cfg --load -1
 #### Save the built graph to a protobuf file(`.pb`)
 
 During training, the script will occasionally save intermediate results into Tensorflow checkpoints, store in `ckpt/`.
-To resume to any checkpoint before preforming training/testing, use `--load [checkpoint_num]` option,
+To resume to any checkpoint before performing training/testing, use `--load [checkpoint_num]` option,
 if `checkpoint_num < 0`, darkflow will load the most recent save by parsing ckpt/checkpoint.
 
 ```bash
