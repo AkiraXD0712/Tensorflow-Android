@@ -131,7 +131,7 @@ python tensorflow/python/tools/optimize_for_inference.py \
 This will generate a ~/tf_files/optimized_graph.pb file which is removed all nodes that aren’t needed, among other optimizations.  
 
 ### Import the model in application
-Now we are going to modifie some files.  
+Now we are going to modify some files.  
 
 ```
 cd /tensorflow
